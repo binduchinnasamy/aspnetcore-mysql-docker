@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  corewebappsimple:
+    image: corewebappsimple
+    build:
+      context: .
+      dockerfile: CoreWebAppSimple/Dockerfile
