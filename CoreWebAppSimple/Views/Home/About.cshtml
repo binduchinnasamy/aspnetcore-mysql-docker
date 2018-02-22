@@ -5,3 +5,10 @@
 <h3>@ViewData["Message"]</h3>
 
 <p>Use this area to provide additional information.</p>
+<p>Time Now in Server: @DateTime.Now.ToString()</p>
+<p>Name of the Server: @Environment.MachineName</p>
+<p>OS of the Server: @Environment.OSVersion</p>
+<p>Current Directory: @Environment.CurrentDirectory</p> 
+<p> System Directory: @Environment.SystemDirectory</p>
+<p>Network Domain Name: @Environment.UserDomainName</p>
+<p>Physical Memory Mapped: @Environment.WorkingSet.ToString()</p>
