@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CoreWebAppSimple.Models.Film>
+@{
+    ViewBag.Title = "Films";
+}
+<h3>** data pulled from MySQL DB nammed 'Sakila' running in a container **</h3>
+<h2>Films</h2>
+<table class="table">
+    <tr>
+        <th>Film ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Release Year</th>
+        <th>Length</th>
+        <th>Rating</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Length)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+        </tr>
+    }
+</table>

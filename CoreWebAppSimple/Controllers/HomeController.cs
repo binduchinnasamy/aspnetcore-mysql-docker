@@ -25,7 +25,7 @@ namespace CoreWebAppSimple.Controllers
         public IActionResult About()
         {
             var contents = _fileProvider.GetDirectoryContents("");
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Container Details";
 
             return View(contents);
         }

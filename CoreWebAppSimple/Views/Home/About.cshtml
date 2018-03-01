@@ -7,7 +7,6 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
 <p>Time Now in Server: @DateTime.Now.ToString()</p>
 <p>Name of the Server: @Environment.MachineName</p>
 <p>OS of the Server: @Environment.OSVersion</p>
@@ -16,8 +15,9 @@
 <p>Network Domain Name: @Environment.UserDomainName</p>
 <p>Physical Memory Mapped: @Environment.WorkingSet.ToString()</p>
 <br />
-<p> File Access</p>
-<h2>Folder Contents</h2>
+
+
+<h2>ASP.NET Core Web App Folder Content</h2>
 
 <ul>
     @foreach (IFileInfo item in Model)

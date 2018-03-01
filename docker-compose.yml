@@ -1,8 +1,35 @@
 version: '3'
 
 services:
-  corewebappsimple:
-    image: corewebappsimple
-    build:
-      context: .
-      dockerfile: CoreWebAppSimple/Dockerfile
+    db:
+        image: mysql
+        ports: 
+            - "3306:3306"
+        environment:
+          MYSQL_ROOT_PASSWORD: bindu123
+        volumes:
+        #Note that this is for Windows.
+            - //C/Work/Dockershared/mysql:/var/lib/mysql   
+        networks:
+            - default
+   
+    corewebappsimple:
+        image: corewebappsimple
+        build:
+          context: .
+          dockerfile: CoreWebAppSimple/Dockerfile
+        links:
+          - db:db
+        ports:
+          - 8001:80
+        restart: always
+
+    phpmyadmin:
+          image: phpmyadmin/phpmyadmin
+          links: 
+              - db:db
+          ports:
+              - 8000:80
+          environment:
+              MYSQL_ROOT_PASSWORD: bindu123
+      
