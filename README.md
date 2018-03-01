@@ -7,7 +7,7 @@ Take a look at the docker-composer.yml file for more details
 ###### Points to note in this solution
 
 1. MySQL DB uses a volume which is pointing to a folder in host. So the MySQL DB data persisted outside of the container
-2. Sample DB http://downloads.mysql.com/docs/sakila-db.zip can loaded 
+2. Sample DB http://downloads.mysql.com/docs/sakila-db.zip can loaded into mysql DB using the phpmyadmin website
 3. Phpmyadmin web application can be used to connect to mySQL DB to bulk create tables (from the above link)
 
 Docker Compose File
